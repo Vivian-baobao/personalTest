@@ -5,7 +5,7 @@ const service = axios.create({
   timeout: 5000,
 });
 service.interceptors.request.use((config) => {
-    if(config)
+  if (config) config.headers["lanuage"] = "CN";
   //  do something
 });
 service.interceptors.response.use((response) => {
